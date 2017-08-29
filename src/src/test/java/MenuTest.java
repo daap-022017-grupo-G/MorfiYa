@@ -1,4 +1,5 @@
+import junit.framework.TestCase;
 
-public class MenuTest {
+public class MenuTest extends TestCase{
 
 }
