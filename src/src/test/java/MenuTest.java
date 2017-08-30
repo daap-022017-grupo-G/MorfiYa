@@ -2,6 +2,7 @@ import org.junit.Test;
 
 import custom_exceptions.MenuNameNoLongEnoughException;
 import custom_exceptions.MenuNameNoShortEnoughException;
+import model.Menu;
 
 public class MenuTest {
 		

@@ -1,3 +1,4 @@
+package model;
 import custom_exceptions.MenuNameNoLongEnoughException;
 import custom_exceptions.MenuNameNoShortEnoughException;
 
