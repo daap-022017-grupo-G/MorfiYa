@@ -2,7 +2,7 @@ package builders;
 
 import java.util.Optional;
 
-import custom_exceptions.BuildIncompletaException;
+import custom_exceptions.IncompleteBuildException;
 import model.Provider;
 
 public class ProviderBuilder {
@@ -44,9 +44,11 @@ public class ProviderBuilder {
 		return this;
 	}
 	public Provider build() {
-		this.logo.orElseThrow(() -> new BuildIncompletaException("Le falta setear el logo al provider"));
 		Provider provider = new Provider();
-		provider.setLogo(logo.get());
+		provider.setLogo(this.logo.orElseThrow(() -> new IncompleteBuildException("The Provider doen't have a logo")));
+		provider.setDescription(this.description.orElseThrow(() -> new IncompleteBuildException("The Provider doen't have description")));
+		this.URL.ifPresent(url -> provider.setURL(url));
+		this.deliveryArea.ifPresent(delArea -> provider.setDeliveryArea(delArea));
 		return provider;
 	}
 }

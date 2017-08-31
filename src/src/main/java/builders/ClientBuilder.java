@@ -20,7 +20,14 @@ public class ClientBuilder {
 	private Optional<String> address;
 
 	
-	public ClientBuilder() {}
+	public ClientBuilder() {
+		this.cuit = Optional.empty();
+		this.nameAndSurname = Optional.empty();
+		this.email = Optional.empty();
+		this.telephone = Optional.empty();
+		this.address = Optional.empty();
+		
+	}
 	
 	public ClientBuilder setCuit(String cuit) {
 		this.cuit = Optional.of(cuit);
