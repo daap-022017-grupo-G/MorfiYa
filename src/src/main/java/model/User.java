@@ -1,11 +1,11 @@
 package model;
 
 public abstract class User {
-	String name;
-	String city;
-	String address;
-	String telephone;
-	String email;
+	private String name;
+	private String city;
+	private String address;
+	private String telephone;
+	private String email;
 	
 	public User() {
 		

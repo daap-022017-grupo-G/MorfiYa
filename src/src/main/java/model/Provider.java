@@ -2,10 +2,10 @@ package model;
 
 public class Provider extends User {
 	
-	String logo;
-	String description;
-	String URL;
-	String deliveryArea;
+	private String logo;
+	private String description;
+	private String URL;
+	private String deliveryArea;
 	
 	public Provider() {
 		

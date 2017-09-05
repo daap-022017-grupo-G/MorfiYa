@@ -1,8 +1,8 @@
 package model;
 
 public class Client extends User {
-	String CUIT;
-	Integer credit;
+	private String CUIT;
+	private Integer credit;
 	
 	public Client () {
 		
