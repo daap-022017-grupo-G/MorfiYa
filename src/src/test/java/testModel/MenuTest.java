@@ -1,3 +1,4 @@
+package testModel;
 import org.junit.Test;
 
 import custom_exceptions.MenuDescriptionNoLongEnoughException;
