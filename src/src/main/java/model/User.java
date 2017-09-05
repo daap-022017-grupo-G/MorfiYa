@@ -7,9 +7,6 @@ public abstract class User {
 	private String telephone;
 	private String email;
 	
-	public User() {
-		
-	}
 
 	public String getName() {
 		return name;

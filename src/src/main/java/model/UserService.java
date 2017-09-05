@@ -3,15 +3,20 @@ package model;
 import java.util.Date;
 
 public class UserService {
-	
+	private User user;
 	private Integer credit;
 	private String previousMenues;
 	private Date dateEstimated;
 	private String menu;
 	private Integer value;
 	
-	public UserService () {
-		
+	
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 	public Integer getCredit() {

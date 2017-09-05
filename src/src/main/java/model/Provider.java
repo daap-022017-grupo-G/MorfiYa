@@ -7,9 +7,6 @@ public class Provider extends User {
 	private String URL;
 	private String deliveryArea;
 	
-	public Provider() {
-		
-	}
 	
 	public String getLogo() {
 		return logo;

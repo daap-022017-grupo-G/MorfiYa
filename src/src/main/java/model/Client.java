@@ -4,9 +4,6 @@ public class Client extends User {
 	private String CUIT;
 	private Integer credit;
 	
-	public Client () {
-		
-	}
 
 	public String getCUIT() {
 		return CUIT;

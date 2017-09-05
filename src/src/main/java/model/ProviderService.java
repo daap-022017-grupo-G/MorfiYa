@@ -2,12 +2,18 @@ package model;
 
 import java.util.Date;
 
-public class ProviderService {
+public class ProviderService extends UserService {
+	private Provider provider;
 	private Date dateOfSale;
 	private Boolean wantDelivery;
 	
-	public ProviderService() {
-		
+	
+	public Provider getProvider() {
+		return provider;
+	}
+
+	public void setProvider(Provider provider) {
+		this.provider = provider;
 	}
 
 	public Date getDateOfSale() {
