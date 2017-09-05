@@ -1,15 +1,17 @@
-import custom_exceptions.MenuDescriptionNoLongEnoughException;
-import custom_exceptions.MenuDescriptionNoShortEnoughException;
+package model;
+
 import custom_exceptions.MenuNameNoLongEnoughException;
 import custom_exceptions.MenuNameNoShortEnoughException;
 import custom_exceptions.MenusDeliverysCostNotCheapEnoughException;
 import custom_exceptions.MenusDeliverysCostNotExpensiveEnoughException;
+import custom_exceptions.MenuDescriptionNoLongEnoughException;
+import custom_exceptions.MenuDescriptionNoShortEnoughException;
 
 public class Menu {
 
 	private String name = "";
 	private String description = "";
-	private Integer deliveryCost;
+	private Integer deliveryCost = 0;
 
 	public void setName(String newName){
 		if (newName.length() < 4) throw new MenuNameNoLongEnoughException();
@@ -38,6 +40,10 @@ public class Menu {
 		if (newCost > 40) throw new MenusDeliverysCostNotCheapEnoughException();
 		
 		this.deliveryCost = newCost;	
+	}
+
+	public Integer getDeliveryCost(){
+		return this.deliveryCost;
 	}
 
 }

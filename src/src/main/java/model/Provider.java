@@ -1,3 +1,4 @@
+package model;
 
 public class Provider extends User {
 	

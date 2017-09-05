@@ -6,6 +6,7 @@ import custom_exceptions.MenuNameNoLongEnoughException;
 import custom_exceptions.MenuNameNoShortEnoughException;
 import custom_exceptions.MenusDeliverysCostNotCheapEnoughException;
 import custom_exceptions.MenusDeliverysCostNotExpensiveEnoughException;
+import model.Menu;
 
 public class MenuTest {
 		
