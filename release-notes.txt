@@ -1,0 +1,23 @@
+@version $Id: release-notes.txt 0001 2017-09-09 11:34 $
+
+========================================================================
+MorfiYa - Grupo 7 - Desarrollo de Aplicaciones UNQ 2017
+========================================================================
+
+MorfiYa es una aplicacion similar a PedidosYa pero con viandas ejecutivas donde proveedores y clientes deben registrarse para poder hacer uso de la misma. Los proveedores podran subir sus productos y servicios y los clientes podran acceder a ellos por nuestra aplicacion.
+
+---------------------------------------------------------------------
+TAG 0000001
+---------------------------------------------------------------------
+NEW FEATURES (lo que están entregando y está funcionando):
+* Builder de proveedores y clientes
+* test de productos
+
+NOTES (ej: funcionalidad que falta, alguna consideración especial):
+* google maps
+* validacion del cuit por la AFIP
+
+KNOWN ISSUES (ej: funcionalidad que saben que están funcionando diferente, algún error conocido en la funcionalidad terminada, etc) :
+* xxx
+* xxx
+
