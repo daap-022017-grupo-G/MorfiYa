@@ -1,6 +1,7 @@
 package test_model;
 
-import static org.junit.Assert.fail;
+
+import static org.junit.Assert.*;
 import org.junit.Test;
 import model.Provider;
 
@@ -12,7 +13,7 @@ public class ProviderTest {
 	@Test 
 	public void testProviderHasNoName(){
 		Provider newProvider = new Provider();
-		assert(newProvider.getName().isEmpty());
+		assertTrue(newProvider.getName().isEmpty());
 		
 	}
 	
@@ -22,7 +23,7 @@ public class ProviderTest {
 	@Test 
 	public void testProviderHasNoLogo(){
 		Provider newProvider = new Provider();
-		assert(newProvider.getLogo().isEmpty());
+		assertTrue(newProvider.getLogo().isEmpty());
 		
 	}
 	
@@ -31,7 +32,7 @@ public class ProviderTest {
 	@Test 
 	public void testProviderHasNoCity(){
 		Provider newProvider = new Provider();
-		assert(newProvider.getCity().isEmpty());
+		assertTrue(newProvider.getCity().isEmpty());
 		
 	}
 	
@@ -46,14 +47,14 @@ public class ProviderTest {
 	@Test 
 	public void testProviderHasNoDescription(){
 		Provider newProvider = new Provider();
-		assert(newProvider.getDescription().isEmpty());
+		assertTrue(newProvider.getDescription().isEmpty());
 	}
 	
 	@Test 
 	public void testProviderHasNoEnoughtDescription(){
 		Provider newProvider = new Provider();
 		newProvider.setDescription("insuficiente");
-		assert(newProvider.getDescription().length() < 30);		
+		assertTrue(newProvider.getDescription().length() < 30);		
 	}
 	
 	@Test 
@@ -63,7 +64,7 @@ public class ProviderTest {
 				+ "marca cuchuflito que cuidan su bolsillo";
 		Provider newProvider = new Provider();
 		newProvider.setDescription(verso);
-		assert(newProvider.getDescription().length() > 200);		
+		assertTrue(newProvider.getDescription().length() > 200);		
 	}
 	
 	@Test 
@@ -71,7 +72,7 @@ public class ProviderTest {
 		Provider newProvider = new Provider();
 		newProvider.setDescription("servicio de lunch para empresas, fiestas y eventos especiales");
 		Integer longitud = newProvider.getDescription().length();
-		assert(longitud > 29 && longitud < 201);		
+		assertTrue(longitud > 29 && longitud < 201);		
 	}
 	
 //Dirección de sitio web o dirección de facebook
@@ -83,21 +84,21 @@ public class ProviderTest {
 	@Test 
 	public void testProviderHasNullEmail(){
 		Provider newProvider = new Provider();
-		assert(newProvider.getEmail().isEmpty());		
+		assertTrue(newProvider.getEmail().isEmpty());		
 	}
 	
 	@Test 
 	public void testProviderHasInvalidEmail(){
 		Provider newProvider = new Provider();
 		newProvider.setEmail("no tengo");
-		assert(newProvider.getEmail().contains("@")== false);
+		assertFalse(newProvider.getEmail().contains("@"));
 	}
 	
 	@Test 
 	public void testProviderValidEmail(){
 		Provider newProvider = new Provider();
 		newProvider.setEmail("ventas@puestodechorygourmet.com");
-		assert(newProvider.getEmail().contains("@"));		
+		assertTrue(newProvider.getEmail().contains("@"));		
 	}
 	
 //Teléfono de contacto [Obligatorio, Teléfono válido, +Característica]
@@ -109,21 +110,21 @@ public class ProviderTest {
 	@Test 
 	public void testProviderHasNoTelephone(){
 		Provider newProvider = new Provider();
-		assert(newProvider.getTelephone().isEmpty());
+		assertTrue(newProvider.getTelephone().isEmpty());
 	}
 
 	@Test 
 	public void testProviderHasInvalidTel(){
 		Provider newProvider = new Provider();
 		newProvider.setTelephone("0303456");
-		assert(newProvider.getTelephone().length() != 10);		
+		assertFalse(newProvider.getTelephone().length() == 10);		
 	}
 	
 	@Test 
 	public void testProviderValidTel(){
 		Provider newProvider = new Provider();
 		newProvider.setTelephone("0123456789");
-		assert(newProvider.getTelephone().length() == 10);
+		assertEquals(newProvider.getTelephone().length() ,10);
 	}
 	
 //Horario y días de atención [Obligatorio]

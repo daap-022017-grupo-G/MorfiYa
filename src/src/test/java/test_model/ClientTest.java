@@ -1,10 +1,9 @@
 package test_model;
 
-import static org.junit.Assert.fail;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 import org.junit.Test;
-
 import model.Client;
-import model.Provider;
 
 
 public class ClientTest {
@@ -15,7 +14,7 @@ public class ClientTest {
 	@Test 
 	public void testClientHasNoCUIT(){
 		Client newClient = new Client();
-		assert(newClient.getCUIT().isEmpty());
+		assertTrue(newClient.getCUIT().isEmpty());
 	}
 	
 	
@@ -23,7 +22,7 @@ public class ClientTest {
 	@Test 
 	public void testClientHasNoName(){
 		Client newClient = new Client();
-		assert(newClient.getName().isEmpty());
+		assertTrue(newClient.getName().isEmpty());
 		
 	}
 	
@@ -31,21 +30,21 @@ public class ClientTest {
 	@Test 
 	public void testClientHasNullEmail(){
 		Client newClient = new Client();
-		assert(newClient.getEmail().isEmpty());		
+		assertTrue(newClient.getEmail().isEmpty());		
 	}
 	
 	@Test 
 	public void testClientHasInvalidEmail(){
 		Client newClient = new Client();
 		newClient.setEmail("no tengo");
-		assert(newClient.getEmail().contains("@")== false);
+		assertFalse(newClient.getEmail().contains("@"));
 	}
 	
 	@Test 
 	public void testClientValidEmail(){
 		Client newClient = new Client();
 		newClient.setEmail("cliente@comprador.com");
-		assert(newClient.getEmail().contains("@"));		
+		assertTrue(newClient.getEmail().contains("@"));		
 	}
 
 	
@@ -58,21 +57,21 @@ public class ClientTest {
 	@Test 
 	public void testClientHasNoTelephone(){
 		Client newClient = new Client();
-		assert(newClient.getTelephone().isEmpty());
+		assertTrue(newClient.getTelephone().isEmpty());
 	}
 
 	@Test 
 	public void testClientHasInvalidTel(){
 		Client newClient = new Client();
 		newClient.setTelephone("0303456");
-		assert(newClient.getTelephone().length() != 10);		
+		assertFalse(newClient.getTelephone().length() == 10);		
 		}
 	
 	@Test 
 	public void testClientValidTel(){
 		Client newClient = new Client();
 		newClient.setTelephone("0123456789");
-		assert(newClient.getTelephone().length() == 10);
+		assertTrue(newClient.getTelephone().length() == 10);
 	}
 	
 
@@ -80,7 +79,7 @@ public class ClientTest {
 	@Test 
 	public void testClientHasNoCity(){
 		Client newClient = new Client();
-		assert(newClient.getCity().isEmpty());
+		assertTrue(newClient.getCity().isEmpty());
 		
 	}
 	
