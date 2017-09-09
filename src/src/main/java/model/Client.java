@@ -10,7 +10,7 @@ public class Client extends User {
 	private List<Order> ordersToRate;
 	
 	public Client() {
-		this.CUIT = new String();
+		this.CUIT="";
 		this.credit = 0;
 		this.historicOrders = new ArrayList<Order>();
 		this.ordersToRate = new ArrayList<Order>();

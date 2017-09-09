@@ -3,11 +3,11 @@ package model;
 
 
 public abstract class User {
-	protected String name = new String();
-	protected String city = new String();
-	protected String address = new String();
-	protected String telephone = new String();
-	protected String email = new String();
+	protected String name = "";
+	protected String city = "";
+	protected String address = "";
+	protected String telephone = "";
+	protected String email = "";
 	
 	
 
