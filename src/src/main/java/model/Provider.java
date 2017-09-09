@@ -7,6 +7,13 @@ public class Provider extends User {
 	private String URL;
 	private String deliveryArea;
 	
+	public Provider() {
+		this.logo = new String();
+		this.description = new String();
+		this.URL = new String();
+		this.deliveryArea = new String();
+	}
+	
 	
 	public String getLogo() {
 		return logo;

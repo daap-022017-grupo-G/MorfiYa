@@ -1,11 +1,14 @@
 package model;
 
+
+
 public abstract class User {
-	private String name;
-	private String city;
-	private String address;
-	private String telephone;
-	private String email;
+	protected String name = new String();
+	protected String city = new String();
+	protected String address = new String();
+	protected String telephone = new String();
+	protected String email = new String();
+	
 	
 
 	public String getName() {

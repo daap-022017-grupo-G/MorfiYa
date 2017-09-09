@@ -61,7 +61,8 @@ public class ProviderTest {
 	public void testProviderHasTooLongDescription(){
 		String verso = "los productos que les ofrezco son de una calidad inigualable por lo " 
 				+ "que les aseguro que tomara una sabia decision el haber elegido productos "
-				+ "marca cuchuflito que cuidan su bolsillo";
+				+ "marca cuchuflito que cuidan su bolsillo y le ofrecen la mejor calidad dentro"
+				+ "de los productos de su rubro";
 		Provider newProvider = new Provider();
 		newProvider.setDescription(verso);
 		assertTrue(newProvider.getDescription().length() > 200);		
