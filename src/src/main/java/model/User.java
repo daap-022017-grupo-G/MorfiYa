@@ -8,6 +8,7 @@ public abstract class User {
 	protected String address = "";
 	protected String telephone = "";
 	protected String email = "";
+	protected Integer credit;
 	
 	
 
@@ -51,6 +52,13 @@ public abstract class User {
 		this.email = email;
 	}
 	
-	
+	public Integer getCredit() {
+		return credit;
+	}
+
+	public void setCredit(Integer credit) {
+		this.credit = credit;
+	}
+
 	
 	}

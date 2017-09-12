@@ -5,6 +5,8 @@ import java.util.List;
 
 import org.joda.time.TimeOfDay;
 
+import custom_exceptions.NotEnoughtCreditException;
+
 public class Order {
 	
 	private Provider provider;
@@ -57,6 +59,24 @@ public class Order {
 		this.delivered = delivered;
 	}
 	
-	
+	/*al comprar, al cliente se le descuenta del saldo el valor de la compra
+	 * y al proveedor se le debe acreditar dicho valor en su saldo*/
+	public void buy() {
+		Integer clientCredit = this.client.getCredit();
+		Integer providerCredit = this.provider.getCredit();
+		Integer orderValue = 0;
+		for (int i =0 ; i < this.menus.size();i++) {
+			orderValue += this.menus.get(i).getValue();
+		}
+		if (clientCredit < orderValue) {
+			throw new NotEnoughtCreditException("debe su monto es insuficiente para esta operacion");
+		}
+		else {
+			providerCredit = providerCredit + orderValue;
+			clientCredit = clientCredit - orderValue;
+			this.client.setCredit(clientCredit);
+			this.provider.setCredit(providerCredit);			
+		}
+	}
 	
 }

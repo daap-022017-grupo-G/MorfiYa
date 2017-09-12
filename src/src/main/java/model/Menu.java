@@ -12,6 +12,7 @@ public class Menu {
 	private String name = "";
 	private String description = "";
 	private Integer deliveryCost = 0;
+	private Integer value;
 
 	public void setName(String newName){
 		if (newName.length() < 4) throw new MenuNameNoLongEnoughException();
@@ -44,6 +45,14 @@ public class Menu {
 
 	public Integer getDeliveryCost(){
 		return this.deliveryCost;
+	}
+
+	public Integer getValue() {
+		return value;
+	}
+
+	public void setValue(Integer value) {
+		this.value = value;
 	}
 
 }

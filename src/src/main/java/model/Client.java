@@ -5,7 +5,6 @@ import java.util.List;
 
 public class Client extends User {
 	private String CUIT;
-	private Integer credit;
 	private List<Order> historicOrders;
 	private List<Order> ordersToRate;
 	
@@ -26,13 +25,6 @@ public class Client extends User {
 		CUIT = cUIT;
 	}
 
-	public Integer getCredit() {
-		return credit;
-	}
-
-	public void setCredit(Integer credit) {
-		this.credit = credit;
-	}
 	
 	public void makeOrder(Order order) {
 		this.historicOrders.add(order);
