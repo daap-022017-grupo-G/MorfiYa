@@ -48,7 +48,7 @@ public class Menu {
 	}
 
 	public Integer getValue() {
-		return value;
+		return value + this.deliveryCost;
 	}
 
 	public void setValue(Integer value) {
