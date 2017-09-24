@@ -6,7 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProviderService {
+public class ProviderService extends GenericService<Provider> {
     private List<Provider> providerDataBase= new ArrayList<Provider>();
 
 

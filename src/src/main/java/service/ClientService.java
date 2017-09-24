@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class ClientService{
+public class ClientService extends GenericService<Client>{
     private List<Client> clientDataBase= new ArrayList<Client>();
 
 

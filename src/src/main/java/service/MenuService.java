@@ -2,7 +2,7 @@ package service;
 
 import model.Menu;
 
-public class MenuService {
+public class MenuService extends GenericService<Menu> {
 
 	public void createMenu(Menu menu) {
 		//crea el menu en la base de datos.
