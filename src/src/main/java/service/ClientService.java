@@ -1,6 +1,5 @@
 package service;
 
-import antlr.collections.AST;
 import model.Client;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -22,7 +21,7 @@ public class ClientService{
         return this.clientDataBase.get(0);
     }
 
-    public void updateClient(Client menu) {
+    public void updateClient(Client client) {
         //actualiza el cliente en la base
         System.out.println("se ha actualizado el cliente");
 
@@ -35,7 +34,7 @@ public class ClientService{
 
     }
 
-    @Transactional(readOnly = true)
+  //  @Transactional(readOnly = true)
     public List<Client> retriveAll() {
         return clientDataBase;
        // return this.getRepository().findAll();
