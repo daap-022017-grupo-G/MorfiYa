@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c5eeda8-9a48-4dd9-94cf-3fa9f189e5bc" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/src/main/java/service/ClientService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/src/main/java/model/MenuService.java" afterPath="$PROJECT_DIR$/src/src/main/java/service/MenuService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/src/main/java/model/MenuService.java" afterPath="$PROJECT_DIR$/src/src/main/java/model/MenuService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/src/main/java/model/Order.java" afterPath="$PROJECT_DIR$/src/src/main/java/model/Order.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/src/main/java/model/Client.java" afterPath="$PROJECT_DIR$/src/src/main/java/model/Client.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/src/main/java/model/Provider.java" afterPath="$PROJECT_DIR$/src/src/main/java/model/Provider.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/src/main/java/model/User.java" afterPath="$PROJECT_DIR$/src/src/main/java/model/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/src/test/java/test_model/OrderTest.java" afterPath="$PROJECT_DIR$/src/src/test/java/test_model/OrderTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/src/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,21 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/src/main/java/model/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Order.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/src/main/java/model/Order.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-131">
-              <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+            <state relative-caret-position="782">
+              <caret line="80" column="14" lean-forward="true" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -48,21 +39,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MenuService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/src/main/java/model/MenuService.java">
+      <file leaf-file-name="Entity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/src/main/java/model/Entity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-              <folding />
+            <state relative-caret-position="255">
+              <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+              <folding>
+                <element signature="e#190#191#0" expanded="true" />
+                <element signature="e#215#216#0" expanded="true" />
+                <element signature="e#254#255#0" expanded="true" />
+                <element signature="e#282#283#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pom.xml">
+      <file leaf-file-name="HibernateTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/src/test/java/test_model/HibernateTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="111" column="49" lean-forward="false" selection-start-line="111" selection-start-column="49" selection-end-line="111" selection-end-column="49" />
+            <state relative-caret-position="322">
+              <caret line="24" column="58" lean-forward="false" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClientService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/src/main/java/service/ClientService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="271">
+              <caret line="39" column="30" lean-forward="false" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#270#278#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MenuService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/src/main/java/service/MenuService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="305">
+              <caret line="27" column="0" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -74,6 +95,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -91,9 +113,15 @@
         <option value="$PROJECT_DIR$/src/src/test/java/model/OrderTest.java" />
         <option value="$PROJECT_DIR$/src/pom.xml" />
         <option value="$PROJECT_DIR$/src/src/main/java/model/Order.java" />
-        <option value="$PROJECT_DIR$/src/src/main/java/model/User.java" />
         <option value="$PROJECT_DIR$/src/src/test/java/test_model/OrderTest.java" />
         <option value="$PROJECT_DIR$/src/src/main/java/model/MenuService.java" />
+        <option value="$PROJECT_DIR$/src/src/main/java/model/Entity.java" />
+        <option value="$PROJECT_DIR$/src/src/main/java/model/User.java" />
+        <option value="$PROJECT_DIR$/src/src/main/java/model/Client.java" />
+        <option value="$PROJECT_DIR$/src/src/main/java/model/Provider.java" />
+        <option value="$PROJECT_DIR$/src/src/main/java/service/MenuService.java" />
+        <option value="$PROJECT_DIR$/src/src/main/java/service/ClientService.java" />
+        <option value="$PROJECT_DIR$/src/src/test/java/test_model/HibernateTest.java" />
       </list>
     </option>
   </component>
@@ -161,6 +189,14 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MorfiYa-G" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MorfiYa-G" type="b2602c69:ProjectViewProjectNode" />
@@ -446,38 +482,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/main/java/model/Provider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/main/java/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/main/java/model/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-131">
-          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="111" column="49" lean-forward="false" selection-start-line="111" selection-start-column="49" selection-end-line="111" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/src/test/java/test_model/OrderTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -486,11 +490,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/main/java/model/MenuService.java">
+    <entry file="file://$PROJECT_DIR$/src/src/main/java/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <caret line="4" column="41" lean-forward="false" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/src/main/java/model/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="52" lean-forward="false" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/src/main/java/model/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="80" column="14" lean-forward="true" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/src/main/java/model/Provider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="50" lean-forward="false" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/src/main/java/model/Entity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <element signature="e#190#191#0" expanded="true" />
+            <element signature="e#215#216#0" expanded="true" />
+            <element signature="e#254#255#0" expanded="true" />
+            <element signature="e#282#283#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="818">
+          <caret line="111" column="49" lean-forward="false" selection-start-line="111" selection-start-column="49" selection-end-line="111" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/src/main/java/service/MenuService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/java/jdk1.8.0_144/src.zip!/java/io/Serializable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="968">
+          <caret line="168" column="17" lean-forward="false" selection-start-line="168" selection-start-column="17" selection-end-line="168" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/src/main/java/service/ClientService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="39" column="30" lean-forward="false" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#270#278#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/src/test/java/test_model/HibernateTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="24" column="58" lean-forward="false" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

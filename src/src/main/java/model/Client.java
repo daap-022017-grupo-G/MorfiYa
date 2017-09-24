@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Client extends User {
+	private static final long serialVersionUID = 1L;
 	private String CUIT;
 	private List<Order> historicOrders;
 	private List<Order> ordersToRate;

@@ -1,7 +1,7 @@
 package model;
 
 public class Provider extends User {
-	
+	private static final long serialVersionUID = 2L;
 	private String logo = "";
 	private String description = "";
 	private String URL = "";
