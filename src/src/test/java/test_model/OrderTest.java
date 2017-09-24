@@ -27,6 +27,8 @@ public class OrderTest {
         buyer.setName("anyone");
         food = new Menu();
         food.setName("empanadas");
+        buyer.setCredit(187);
+        food.setValue(50);
     }
 
 
@@ -63,25 +65,28 @@ public class OrderTest {
         assertTrue(resultList.get(0).getName().equalsIgnoreCase("empanadas"));
     }
 
-  /*
+
     @Test
-    public void getTypeOfDelivery() throws Exception {
+    public void testOrderWasDelivered(){
+        Order order = new Order();
+        order.wasDelivered();
+        assertTrue(order.getDelivered());
     }
 
     @Test
-    public void setTypeOfDelivery() throws Exception {
+    public void testOrderHasntBeenDeliveredYet() {
+        Order order= new Order();
+        assertFalse(order.getDelivered());
     }
 
     @Test
-    public void getDelivered() throws Exception {
+    public void testBuyOrder() {
+        Order order = new Order();
+        order.setClient(buyer);
+        order.setProvider(businessman);
+        order.addNewMenu(food);
+        order.buy();
+        assertTrue((buyer.getCredit()==137)&& (businessman.getCredit()== 50));
     }
 
-    @Test
-    public void setDelivered() throws Exception {
-    }
-
-    @Test
-    public void buy() throws Exception {
-    }
-*/
 }

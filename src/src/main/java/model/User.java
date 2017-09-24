@@ -8,7 +8,7 @@ public abstract class User {
 	protected String address = "";
 	protected String telephone = "";
 	protected String email = "";
-	protected Integer credit;
+	protected Integer credit=0;
 	
 	
 

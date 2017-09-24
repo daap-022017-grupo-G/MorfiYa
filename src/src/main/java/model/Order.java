@@ -85,5 +85,14 @@ public class Order {
 			this.provider.setCredit(providerCredit);			
 		}
 	}
-	
+
+	public void wasDelivered() {
+		//cuando ya se entrego la orden
+		this.delivered = Boolean.TRUE;
+	}
+
+	public void addNewMenu(Menu food) {
+		// agrega un pedido mas a la lista
+		this.menus.add(food);
+	}
 }

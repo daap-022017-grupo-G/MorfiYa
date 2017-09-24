@@ -2,8 +2,6 @@ package model;
 
 public class MenuService {
 
-	public MenuService() {}
-	
 	public void createMenu(Menu menu) {
 		//crea el menu en la base de datos.
 		System.out.println("menu creado exitosamente");
