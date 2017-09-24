@@ -1,5 +1,6 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -16,6 +17,12 @@ public class Order {
 	private Date dateOfDelivery;
 	private TimeOfDay timeOfDelivery;
 	private Boolean delivered;
+
+	public Order(){
+		this.menus = new ArrayList<Menu>();
+		this.delivered = Boolean.FALSE;
+	}
+
 	public Provider getProvider() {
 		return provider;
 	}
