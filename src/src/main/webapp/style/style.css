@@ -71,7 +71,7 @@ article footer {
 
 footer {
 	display:block;
-	clear:both !important;
+	/*clear:both !important;*/
 	background:#ffffee;
 	padding: 10px;
 	border:1px solid #e7e2d7;

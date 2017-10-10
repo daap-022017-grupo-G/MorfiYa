@@ -1,7 +1,12 @@
 package repository;
 
+import model.Provider;
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.springframework.orm.hibernate4.HibernateCallback;
 import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
 import java.io.Serializable;
+import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -20,14 +25,14 @@ public abstract class HibernateGenericDAO<T> extends HibernateDaoSupport impleme
         List<Long> list = (List<Long>) this.getHibernateTemplate()
                 .find("select count(*) from " + this.persistentClass.getName() + " o");
 
-        // this.getHibernateTemplate().execute(new HibernateCallback<Car>() {
-        //
-        // @Override
-        // public Car doInHibernate(final Session session) throws
-        // HibernateException, SQLException {
-        // throw new UnsupportedOperationException();
-        // }
-        // });
+        this.getHibernateTemplate().execute(new HibernateCallback<Provider>() {
+
+        @Override
+        public Provider doInHibernate(final Session session) throws
+                HibernateException {
+        throw new UnsupportedOperationException();
+        }
+        });
         Long count = list.get(0);
         return count.intValue();
 
