@@ -8,47 +8,47 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
-public class ClientDAO implements GenericRepository<Client>{
+public class ClientDAO implements GenericRepository<Client> {
+
+    Client aClient = new Client();
+    ArrayList<Client> clients = new ArrayList<Client>();
 
 
     @Override
     public void save(Client entity) {
-        Object sessionFactory;
-        sessionFactory
+
     }
 
     @Override
     public void delete(Client entity) {
-        delete(entity);
+
     }
 
     @Override
     public void update(Client entity) {
-        update(entity);
+
     }
 
     @Override
     public Client findById(Serializable id) {
-        Client client = (Client) findById(id);
-        return client;
+        return null;
     }
 
     @Override
     public List<Client> findAll() {
-        List<Client> clients = (List<Client>) findAll();
-        return clients;
+        return null;
     }
 
     @Override
     public void deleteById(Serializable id) {
-        deleteById(id);
+
     }
 
     @Override
     public int count() {
-        count();
         return 0;
     }
 
