@@ -10,7 +10,7 @@ import java.util.List;
 public class ClientService extends GenericService<Client>{
     private List<Client> clientDataBase= new ArrayList<Client>();
 
-
+//inyecar los repo con sprint
     public void addClient(Client client) {
         //agrega el cliente en la base de datos.
         this.clientDataBase.add(client);

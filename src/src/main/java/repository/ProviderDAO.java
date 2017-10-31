@@ -16,7 +16,7 @@ public class ProviderDAO implements GenericRepository<Provider> {
 
     @Override
     public void save(Provider entity) {
-        
+
     }
 
     @Override
