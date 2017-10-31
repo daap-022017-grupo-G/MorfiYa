@@ -7,7 +7,7 @@ import custom_exceptions.MenusDeliverysCostNotExpensiveEnoughException;
 import custom_exceptions.MenuDescriptionNoLongEnoughException;
 import custom_exceptions.MenuDescriptionNoShortEnoughException;
 
-public class Menu {
+public class Menu extends SerializableObject{
 
 	private String name = "";
 	private String description = "";

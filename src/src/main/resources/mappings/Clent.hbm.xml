@@ -11,7 +11,6 @@
         <property name="name" />
         <property name="city" />
         <property name="address" />
-        <property name="address" />
         <property name="telephone" />
     </class>
 </hibernate-mapping>

@@ -8,12 +8,12 @@ import org.joda.time.TimeOfDay;
 
 import custom_exceptions.NotEnoughtCreditException;
 
-public class Order {
+public class Order extends SerializableObject {
 	
 	private Provider provider;
 	private Client client;
 	private List<Menu> menus;
-	private Object typeOfDelivery;
+	//private Object typeOfDelivery;
 	private Date dateOfDelivery;
 	private TimeOfDay timeOfDelivery;
 	private Boolean delivered;
@@ -41,12 +41,12 @@ public class Order {
 	public void setMenus(List<Menu> menus) {
 		this.menus = menus;
 	}
-	public Object getTypeOfDelivery() {
-		return typeOfDelivery;
-	}
-	public void setTypeOfDelivery(Object typeOfDelivery) {
-		this.typeOfDelivery = typeOfDelivery;
-	}
+//	public Object getTypeOfDelivery() {
+//		return typeOfDelivery;
+//	}
+//	public void setTypeOfDelivery(Object typeOfDelivery) {
+//		this.typeOfDelivery = typeOfDelivery;
+//	}
 	public Date getDateOfDelivery() {
 		return dateOfDelivery;
 	}

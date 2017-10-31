@@ -2,7 +2,7 @@ package model;
 
 
 
-public abstract class User extends Entity {
+public abstract class User extends SerializableObject {
 	protected String name = "";
 	protected String city = "";
 	protected String address = "";

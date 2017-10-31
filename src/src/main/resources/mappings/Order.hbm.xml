@@ -10,8 +10,13 @@
 
         <property name="provider" />
         <property name="client" />
-        <property name="menus" />
-        <property name="typeOfDelivery" />
+        <!-- <property name="menus" /> -->
+       <!--  <property name="typeOfDelivery" /> --> 
         <property name="delivered" />
+        <list name="menus" lazy="false">
+			<key column="menuID" />
+			<list-index column="id" />
+			<one-to-many class="model.Menu" />
+		</list>
     </class>
 </hibernate-mapping>
