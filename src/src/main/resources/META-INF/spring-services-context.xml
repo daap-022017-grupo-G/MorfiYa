@@ -7,16 +7,16 @@
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
 
 	<!-- beans de spring -->
-	<bean id="services.general" class="ar.edu.unq.services.GeneralService">
-		<property name="providerService" ref="services.provider" />
-		<property name="clientService" ref="services.client" />
+	<bean id="services.general" class="service.GeneralService">
+		<property name="providerService" ref="service.provider" />
+		<property name="clientService" ref="service.client" />
 	</bean>
 
-	<bean id="services.client" class="services.ClientService">
+	<bean id="service.client" class="service.ClientService">
 		<property name="repository" ref="persistence.clientrepository" />
 	</bean>
 
-	<bean id="services.provider" class="services.ProviderService">
+	<bean id="service.provider" class="service.ProviderService">
 		<property name="repository" ref="persistence.providerrepository" />
 	</bean>
 

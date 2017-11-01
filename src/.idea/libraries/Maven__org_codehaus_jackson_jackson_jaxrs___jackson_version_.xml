@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.codehaus.jackson:jackson-jaxrs:${jackson.version}">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-jaxrs/${jackson.version}/jackson-jaxrs-${jackson.version}.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-jaxrs/${jackson.version}/jackson-jaxrs-${jackson.version}-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-jaxrs/${jackson.version}/jackson-jaxrs-${jackson.version}-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -107,10 +107,10 @@
 	<!-- ________________________________________ -->
 	<!-- ________________________________________ -->
 	
-	<bean id="persistence.clientrepository" class="repositories.ClientRepository" >
+	<bean id="persistence.clientrepository" class="repository.ClientRepository" >
 		<property name="sessionFactory" ref="persistence.sessionFactory" />
 	</bean>
-	<bean id="persistence.providerrepository" class="repositories.ProviderRepository" >
+	<bean id="persistence.providerrepository" class="repository.ProviderRepository" >
 		<property name="sessionFactory" ref="persistence.sessionFactory" />
 	</bean>
 	

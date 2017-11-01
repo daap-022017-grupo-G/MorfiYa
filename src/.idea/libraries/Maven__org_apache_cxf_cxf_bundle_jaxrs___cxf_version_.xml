@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.cxf:cxf-bundle-jaxrs:${cxf.version}">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-bundle-jaxrs/${cxf.version}/cxf-bundle-jaxrs-${cxf.version}.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-bundle-jaxrs/${cxf.version}/cxf-bundle-jaxrs-${cxf.version}-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-bundle-jaxrs/${cxf.version}/cxf-bundle-jaxrs-${cxf.version}-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
