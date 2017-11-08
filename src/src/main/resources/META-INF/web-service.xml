@@ -21,14 +21,13 @@ http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd">
 
 	<bean id='jacksonProvider' class='org.codehaus.jackson.jaxrs.JacksonJaxbJsonProvider' />
 
-
 <!-- =========================== -->
 <!-- =========Servicios  ========= -->
 <!-- =========================== -->
 
-	<jaxrs:server id="post" address="/"  > 
+	<jaxrs:server id="client" address="/"  > 
 		<jaxrs:serviceBeans>
-			<ref bean="postsRest" />
+			<ref bean="clientsRest" />
 		</jaxrs:serviceBeans>
 		<jaxrs:extensionMappings>
 			<entry key="json" value="application/json" />
@@ -43,7 +42,8 @@ http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd">
 		</jaxrs:features>
 	</jaxrs:server>
 
-  <bean id="postsRest" class="web.rest.post.PostsRest">
+  <bean id="clientsRest" class="web.rest.post.ClientsRest">
+  	<property name="clientRepository" ref="persistence.clientrepository"></property>
 </bean>
 
 </beans>

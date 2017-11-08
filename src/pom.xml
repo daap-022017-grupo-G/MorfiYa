@@ -38,6 +38,7 @@
 	</dependency>
 	
 	
+	
 	<dependency>
 		<groupId>commons-collections</groupId>
 		<artifactId>commons-collections</artifactId>
@@ -52,6 +53,12 @@
 		<artifactId>slf4j-log4j12</artifactId>
 		<version>1.6.2</version>
 	</dependency>
+
+<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.4</version>
+		</dependency>
 
 
 	<dependency>

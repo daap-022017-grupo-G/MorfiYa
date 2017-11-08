@@ -1,11 +1,14 @@
 package repository;
 
 import model.Client;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
+
+import fixture.ClientFixture;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -13,8 +16,13 @@ import java.util.List;
 
 public class ClientDAO implements GenericRepository<Client> {
 
-    Client aClient = new Client();
-    ArrayList<Client> clients = new ArrayList<Client>();
+    //Client aClient = new Client();
+    private ArrayList<Client> clients = new ArrayList<Client>();
+   
+    public ClientDAO() {
+        clients = (ArrayList<Client>) ClientFixture.createClients();
+    }
+
 
 
     @Override
@@ -39,7 +47,7 @@ public class ClientDAO implements GenericRepository<Client> {
 
     @Override
     public List<Client> findAll() {
-        return null;
+        return clients;
     }
 
     @Override
@@ -49,7 +57,7 @@ public class ClientDAO implements GenericRepository<Client> {
 
     @Override
     public int count() {
-        return 0;
+        return clients.size();
     }
 
     @Override
