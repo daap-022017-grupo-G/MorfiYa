@@ -20,6 +20,10 @@ $.effects = {};
 // override the animation for color styles
 $.each(['backgroundColor', 'borderBottomColor', 'borderLeftColor',
 	'borderRightColor', 'borderTopColor', 'borderColor', 'color', 'outlineColor'],
+
+function getColor(elem, attr);
+function getRGB(color);
+	
 function(i, attr) {
 	$.fx.step[attr] = function(fx) {
 		if (!fx.colorInit) {
