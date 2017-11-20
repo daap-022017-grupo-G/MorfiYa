@@ -15,7 +15,7 @@ public class HibernateTest{
 
     @Test
     public void testSave() {
-        clientService.addClient(new Client());
+    	clientService.save(new Client());
         Assert.assertEquals(1, clientService.retriveAll().size());
     }
 

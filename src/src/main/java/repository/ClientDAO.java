@@ -2,11 +2,13 @@ package repository;
 
 import model.Client;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import org.apache.commons.lang.StringUtils;
+import org.hibernate.SessionFactory;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.collections.Predicate;
 
@@ -17,7 +19,19 @@ public class ClientDAO implements ClientRepository {
 	
 	 private List<Client> clients;
 
-	 public ClientDAO() {
+	 public SessionFactory sessionFactory;
+
+	 public List<Client> getClients() {
+		return clients;
+	}
+
+
+	public void setClients(List<Client> clients) {
+		this.clients = clients;
+	}
+
+
+	public ClientDAO() {
 	    clients = ClientFixture.createClients();
 	 }
 
@@ -83,6 +97,60 @@ public class ClientDAO implements ClientRepository {
         }
         return result;
 	}
+	
+	 public void setSessionFactory(SessionFactory sessionFactory){
+	     this.sessionFactory = sessionFactory;
+	  }
+
+
+	@Override
+	public void save(Client entity) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void delete(Client entity) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void update(Client entity) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public Client findById(Serializable id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public void deleteById(Serializable id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public int count() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+	@Override
+	public List<Client> findByExample(Client exampleObject) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	
 }
   

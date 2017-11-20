@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Set;
 
 
-public interface ClientRepository {
+public interface ClientRepository extends GenericRepository<Client>{
 
 	List<Client> getClients(Integer from, int numberOfClient, String string) ;
 	
