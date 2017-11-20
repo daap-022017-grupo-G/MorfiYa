@@ -2,61 +2,75 @@ package repository;
 
 import model.Client;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import org.apache.commons.lang.StringUtils;
+import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.collections.Predicate;
 
 import fixture.ClientFixture;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
-public class ClientDAO implements GenericRepository<Client> {
+public class ClientDAO implements ClientRepository {
+	
+	 private List<Client> clients;
 
-    //Client aClient = new Client();
-    private ArrayList<Client> clients = new ArrayList<Client>();
-   
-    public ClientDAO() {
-        clients = (ArrayList<Client>) ClientFixture.createClients();
+	 public ClientDAO() {
+	    clients = ClientFixture.createClients();
+	 }
+
+
+	@Override
+	public List<Client> getClients(Integer from, int numberOfClient, String string) {
+        List<Client> result = this.getClientsByName(string);
+        int to = from + numberOfClient > result.size() ? result.size() : from + numberOfClient;
+        return result.subList(from, to);
+	}
+
+	@Override
+	public Integer getcount(final String name) {
+		List<Client> result = this.getClientsByName(name);
+		return result.size();
+	}
+
+	private List<Client> getClientsByName(String name) {
+		List<Client> result = new ArrayList<Client>();
+        if (!StringUtils.isEmpty(name)) {
+            for (Client client : clients) {
+                if (client.getName().contains(name)) {
+                    result.add(client);
+                }
+            }
+        } else {
+            result.addAll(clients);
+        }
+        return result;
+	}
+
+
+	@Override
+	public Set<String> getNames() {
+        Set<String> names = new HashSet<String>();
+        for (Client client : clients) {
+            names.add(client.getName());
+        }
+        return names;
+
+	}
+
+	@Override
+	public List<Client> getClients(String name) {
+        return (List<Client>) CollectionUtils.select(clients, new Predicate() {
+
+            @Override
+            public boolean evaluate(final Object arg0) {
+                return ((Client) arg0).getName().equals(name);
+            }
+        });
+        // return clients.
     }
-
-
-
-    @Override
-    public void save(Client entity) {
-
-    }
-
-    @Override
-    public void delete(Client entity) {
-
-    }
-
-    @Override
-    public void update(Client entity) {
-
-    }
-
-    @Override
-    public Client findById(Serializable id) {
-        return null;
-    }
-
-    @Override
-    public List<Client> findAll() {
-        return clients;
-    }
-
-    @Override
-    public void deleteById(Serializable id) {
-
-    }
-
-    @Override
-    public int count() {
-        return clients.size();
-    }
-
-    @Override
-    public List<Client> findByExample(Client exampleObject) {
-        return null;
-    }
+	
 }
+  

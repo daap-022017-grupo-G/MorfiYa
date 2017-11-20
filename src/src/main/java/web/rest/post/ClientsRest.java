@@ -1,6 +1,3 @@
-/**
- *
- */
 package web.rest.post;
 
 import java.util.ArrayList;
@@ -19,9 +16,13 @@ import model.Client;
 import repository.ClientRepository;
 
 
-@Path("/posts")
+@Path("/clients")
 public class ClientsRest {
 	private ClientRepository clientRepository;
+	
+	public ClientsRest () {
+		this.clientRepository = new ClientRepository(); //--
+	}
 
     public ClientRepository getClientRepository() {
 		return clientRepository;
@@ -68,7 +69,4 @@ public class ClientsRest {
 //        return postRepository.getTags();
 //    }
 //
-//    public void setPostRepository(final PostRepository postDAO) {
-//        postRepository = postDAO;
-//    }
 }
