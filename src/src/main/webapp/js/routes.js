@@ -4,7 +4,7 @@ morfiApp.config(function ($stateProvider, $urlRouterProvider) {
 
   $stateProvider
 
-    .state('inicio', {
+    .state('home', {
       url: "/",
       templateUrl: "partials/home.html",  
       controller: "HomeCTRL as home"      
