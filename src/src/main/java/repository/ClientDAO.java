@@ -30,7 +30,7 @@ public class ClientDAO implements ClientRepository {
 	}
 
 	@Override
-	public Integer getcount(final String name) {
+	public Integer getCount(final String name) {
 		List<Client> result = this.getClientsByName(name);
 		return result.size();
 	}
@@ -71,6 +71,18 @@ public class ClientDAO implements ClientRepository {
         });
         // return clients.
     }
+	
+	
+
+
+	@Override
+	public List<Client> findAll() {
+		List<Client> result = new ArrayList<Client>();
+        for (Client client : clients) {
+            result.add(client);
+        }
+        return result;
+	}
 	
 }
   

@@ -41,9 +41,12 @@ http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd">
 			<cxf:logging />
 		</jaxrs:features>
 	</jaxrs:server>
+	
+   <bean id="dao.client" class="repository.ClientDAO" />
+	
 
-  <bean id="clientsRest" class="web.rest.post.ClientsRest">
-  	<property name="clientRepository" ref="persistence.clientrepository"></property>
+  <bean id="clientsRest" class="web.rest.client.ClientsRest">
+  	<property name="clientRepository" ref="dao.client"></property>
 </bean>
 
 </beans>

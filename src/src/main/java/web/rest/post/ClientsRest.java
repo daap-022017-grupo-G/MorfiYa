@@ -12,25 +12,17 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Response;
 
 import org.apache.commons.lang.StringUtils;
+
 import model.Client;
 import repository.ClientRepository;
 
 
 @Path("/clients")
 public class ClientsRest {
+    public static final int NUMBER_OF_CLIENT = 10;
 	private ClientRepository clientRepository;
 	
-	public ClientsRest () {
-		this.clientRepository = new ClientRepository(); //--
-	}
 
-    public ClientRepository getClientRepository() {
-		return clientRepository;
-	}
-
-	public void setClientRepository(ClientRepository clientRepository) {
-		this.clientRepository = clientRepository;
-	}
 
 	/**
      * IMPORTANTE!! - Acá deben inyectar el servicio de la aplicación y este
@@ -41,7 +33,9 @@ public class ClientsRest {
     @Path("/{from}")
     @Produces("application/json")
     public List<Client> findClientId(@PathParam("from") final Integer from) {
-        return new ArrayList<Client>();
+    	List<Client> clients = clientRepository.getClients(from, NUMBER_OF_CLIENT, "");
+        return clients;
+        //return new ArrayList<Client>();
     }
 
     @GET
@@ -58,15 +52,12 @@ public class ClientsRest {
     @GET
     @Path("/count")
     @Produces("application/json")
-    public Integer countClientsId(@DefaultValue(StringUtils.EMPTY) @QueryParam("tag") final String tag) {
-        return clientRepository.count();
+    public Integer countClientsId(@DefaultValue(StringUtils.EMPTY) @QueryParam("name") final String name) {
+        return clientRepository.getCount(name);
     }
-//
-//    @GET
-//    @Path("/tags")
-//    @Produces("application/json")
-//    public Set<String> getTagsByBlogId() {
-//        return postRepository.getTags();
-//    }
-//
+
+    public void setClientRepository(final ClientRepository clientDAO) {
+        clientRepository = clientDAO;
+    }
+    
 }

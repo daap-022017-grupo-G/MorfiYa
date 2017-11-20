@@ -15,13 +15,15 @@ public interface ClientRepository {
 
 	List<Client> getClients(Integer from, int numberOfClient, String string) ;
 	
-    Integer getcount(String name);
+    Integer getCount(String name);
 
     Set<String> getNames();
 
     List<Client> getClients(String name);
 
-	
+	List<Client> findAll();
+
+}
 	
 
 
@@ -53,4 +55,4 @@ public interface ClientRepository {
 //		return null;
 //	}
 
-}
+//}
