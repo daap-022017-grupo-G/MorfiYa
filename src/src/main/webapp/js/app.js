@@ -1,3 +1,3 @@
-var morfiYa = angular.module('morfiYa',[
-    "ui.router"
-  ]);
+'use strict';
+
+var app = angular.module('morfiYaApp',['ngAnimate','ngResource']);
