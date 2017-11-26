@@ -49,4 +49,11 @@ http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd">
   	<property name="clientRepository" ref="dao.client"></property>
 </bean>
 
+<bean id="dao.provider" class="repository.ProviderDAO" />
+	
+
+  <bean id="providersRest" class="web.rest.post.ProvidersRest">
+  	<property name="providerRepository" ref="dao.provider"></property>
+</bean>
+
 </beans>

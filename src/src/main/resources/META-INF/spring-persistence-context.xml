@@ -110,10 +110,9 @@
 	<bean id="persistence.clientrepository" class="repository.ClientDAO" >
 		<property name="sessionFactory" ref="persistence.sessionFactory" />
 	</bean>
-	<!-- 	<bean id="persistence.providerRepository" class="repository.ProviderRepository" >
+	<bean id="persistence.providerrepository" class="repository.ProviderDAO" >
 		<property name="sessionFactory" ref="persistence.sessionFactory" />
 	</bean>
-	 -->
 	
 
 </beans>
