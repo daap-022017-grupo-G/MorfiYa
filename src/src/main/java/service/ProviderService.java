@@ -7,7 +7,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProviderService extends GenericService<Provider> {
-    private List<Provider> providerDataBase= new ArrayList<Provider>();
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private List<Provider> providerDataBase= new ArrayList<Provider>();
 
 
     public void addProvider(Provider provider) {

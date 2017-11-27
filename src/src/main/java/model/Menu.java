@@ -13,6 +13,7 @@ public class Menu extends SerializableObject{
 	private String description = "";
 	private Integer deliveryCost = 0;
 	private Integer value;
+	private String link;
 
 	public void setName(String newName){
 		if (newName.length() < 4) throw new MenuNameNoLongEnoughException();
@@ -53,6 +54,11 @@ public class Menu extends SerializableObject{
 
 	public void setValue(Integer value) {
 		this.value = value;
+	}
+
+	public void setImagen(String string) {
+		this.link= string;
+		
 	}
 
 }

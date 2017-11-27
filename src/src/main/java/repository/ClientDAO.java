@@ -20,6 +20,9 @@ public class ClientDAO implements ClientRepository {
 	 private List<Client> clients;
 
 	 public SessionFactory sessionFactory;
+	 
+
+
 
 	 public List<Client> getClients() {
 		return clients;
@@ -105,50 +108,48 @@ public class ClientDAO implements ClientRepository {
 
 	@Override
 	public void save(Client entity) {
-		// TODO Auto-generated method stub
+		this.sessionFactory.openSession().save(entity);
 		
 	}
 
 
 	@Override
 	public void delete(Client entity) {
-		// TODO Auto-generated method stub
+		this.sessionFactory.openSession().delete(entity);
 		
 	}
 
 
 	@Override
 	public void update(Client entity) {
-		// TODO Auto-generated method stub
+		this.sessionFactory.openSession().update(entity);
 		
 	}
 
 
 	@Override
 	public Client findById(Serializable id) {
-		// TODO Auto-generated method stub
-		return null;
+		return (Client) this.sessionFactory.openSession().get(Client.class, id);
 	}
 
 
 	@Override
 	public void deleteById(Serializable id) {
-		// TODO Auto-generated method stub
+		Client toDelete = this.findById(id);
+		this.sessionFactory.openSession().delete(toDelete);
 		
 	}
 
 
 	@Override
 	public int count() {
-		// TODO Auto-generated method stub
-		return 0;
+		return this.sessionFactory.openSession().createQuery("from Client").list().size();
 	}
 
 
 	@Override
 	public List<Client> findByExample(Client exampleObject) {
-		// TODO Auto-generated method stub
-		return null;
+		return this.sessionFactory.openSession().createQuery(exampleObject.getName()).list();
 	}
 
 	
