@@ -1,6 +1,6 @@
 package web.rest.post;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 import javax.ws.rs.DefaultValue;
@@ -14,6 +14,7 @@ import javax.ws.rs.core.Response;
 import org.apache.commons.lang.StringUtils;
 
 import model.Client;
+import model.Menu;
 import repository.ClientRepository;
 
 
@@ -32,9 +33,8 @@ public class ClientsRest {
     @GET
     @Path("/{from}")
     @Produces("application/json")
-    public List<Client> findClientId(@PathParam("from") final Integer from) {
-    	List<Client> clients = clientRepository.getClients(from, NUMBER_OF_CLIENT, "");
-        return clients;
+    public Client findClientId(@PathParam("from") final Integer from) {
+    	return clientRepository.findById(from);
         //return new ArrayList<Client>();
     }
 
@@ -59,5 +59,15 @@ public class ClientsRest {
     public void setClientRepository(final ClientRepository clientDAO) {
         clientRepository = clientDAO;
     }
+    
+    @GET
+    @Path("/Menus")
+	public Response getMenu(){
+    	List<Menu> menus = clientRepository.getMenus();
+         if (menus.isEmpty()) {
+             return Response.status(Response.Status.NOT_FOUND).build();
+         }
+         return Response.ok(menus).build();
+	}
     
 }

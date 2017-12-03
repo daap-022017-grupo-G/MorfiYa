@@ -6,6 +6,7 @@ import model.Client;
 //import org.hibernate.Criteria;
 //import org.hibernate.HibernateException;
 //import org.hibernate.Session;
+import model.Menu;
 
 import java.util.List;
 import java.util.Set;
@@ -22,6 +23,8 @@ public interface ClientRepository extends GenericRepository<Client>{
     List<Client> getClients(String name);
 
 	List<Client> findAll();
+	
+	List<Menu> getMenus();
 
 }
 	

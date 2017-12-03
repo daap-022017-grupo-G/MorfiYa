@@ -10,6 +10,10 @@ import custom_exceptions.NotEnoughtCreditException;
 
 public class Order extends SerializableObject {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Provider provider;
 	private Client client;
 	private List<Menu> menus;

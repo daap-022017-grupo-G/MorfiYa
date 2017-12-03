@@ -9,6 +9,10 @@ import custom_exceptions.MenuDescriptionNoShortEnoughException;
 
 public class Menu extends SerializableObject{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String name = "";
 	private String description = "";
 	private Integer deliveryCost = 0;
@@ -57,8 +61,16 @@ public class Menu extends SerializableObject{
 	}
 
 	public void setImagen(String string) {
-		this.link= string;
+		this.setLink(string);
 		
+	}
+
+	public String getLink() {
+		return link;
+	}
+
+	public void setLink(String link) {
+		this.link = link;
 	}
 
 }

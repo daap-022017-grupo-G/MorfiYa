@@ -1,6 +1,7 @@
 package repository;
 
 import model.Client;
+import model.Menu;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -129,7 +130,15 @@ public class ClientDAO implements ClientRepository {
 
 	@Override
 	public Client findById(Serializable id) {
-		return (Client) this.sessionFactory.openSession().get(Client.class, id);
+		Client result = new Client();
+		result.setName("no se encontraron resultados");
+        for (Client client : clients) {
+                if (client.getId() == (Integer)id) {
+                    result = client;
+                }
+            }
+         
+        return result;
 	}
 
 
@@ -149,7 +158,18 @@ public class ClientDAO implements ClientRepository {
 
 	@Override
 	public List<Client> findByExample(Client exampleObject) {
-		return this.sessionFactory.openSession().createQuery(exampleObject.getName()).list();
+		List<Client> list = (ArrayList<Client>)this.sessionFactory.openSession().createQuery(exampleObject.getName()).list();
+		return list;
+	}
+
+
+	@Override
+	public List<Menu> getMenus() {
+		List <Menu> result = new ArrayList<Menu>();
+		for (Client client : clients) {
+                    result.addAll(client.getMenu());
+            }
+        return result;
 	}
 
 	
