@@ -1,7 +1,17 @@
 {
   "name": "MorfiYa-frontend-Angular",
-  "description": "Morfi Ya en construccion",
-  "author": "Alan Rodriguez",
+  "version": "0.0.0",
+  "description": "Morfi Ya aun incompleto",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daap-022017-grupo-G/MorfiYa.git"
+  },
+  "author": "Alan Rodriguez <alan.nicolas.rodriguez@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "angular": "^1.5.8",
     "angular-animate": "^1.5.8",

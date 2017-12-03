@@ -3,6 +3,7 @@ package web.rest.post;
 
 import java.util.List;
 
+import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.DefaultValue;
 import javax.ws.rs.GET;
@@ -38,7 +39,6 @@ public class ClientsRest {
     @Produces("application/json")
     public Client findClientId(@PathParam("from") final Integer from) {
     	return clientRepository.findById(from);
-        //return new ArrayList<Client>();
     }
 
     @GET
@@ -75,9 +75,9 @@ public class ClientsRest {
 	}
     
     @POST
-    @Path("/save")
+    @Path("/save/{id}")
     @Produces("application/json")
-    
+    @Consumes("application/json")
     public Response saveClient(@PathParam("id") final String id) {
     	Client cli = new Client ();
     	cli.setCUIT(id);
@@ -87,7 +87,7 @@ public class ClientsRest {
     }
     
     @DELETE
-    @Path("/delete")
+    @Path("/delete/{id}")
     @Produces("application/json")
     public Response deleteClient(@PathParam("id") final String id) {
     	clientRepository.deleteById(id);
@@ -95,8 +95,9 @@ public class ClientsRest {
     }
     
     @PUT
-    @Path("/update")
+    @Path("/update/{id}")
     @Produces("application/json")
+    @Consumes("application/json")
     public Response updateClient(@PathParam("id") final String id) {
     	Client c = clientRepository.findById(id);
     	clientRepository.update(c);
