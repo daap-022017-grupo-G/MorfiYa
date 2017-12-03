@@ -38,6 +38,8 @@ public class ClientFixture {
 		Menu menu = new Menu();
 		Order order = new Order();
 		menu.setName(orden);
+		menu.setValue(0);
+		menu.setDescription(orden);
 		order.addNewMenu(menu);
 		Client client = new Client();
 		client.setName(name);

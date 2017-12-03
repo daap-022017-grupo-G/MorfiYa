@@ -3,8 +3,11 @@ package web.rest.post;
 
 import java.util.List;
 
+import javax.ws.rs.DELETE;
 import javax.ws.rs.DefaultValue;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -62,6 +65,7 @@ public class ClientsRest {
     
     @GET
     @Path("/Menus")
+    @Produces("application/json")
 	public Response getMenu(){
     	List<Menu> menus = clientRepository.getMenus();
          if (menus.isEmpty()) {
@@ -69,5 +73,34 @@ public class ClientsRest {
          }
          return Response.ok(menus).build();
 	}
+    
+    @POST
+    @Path("/save")
+    @Produces("application/json")
+    
+    public Response saveClient(@PathParam("id") final String id) {
+    	Client cli = new Client ();
+    	cli.setCUIT(id);
+    	cli.setId(Integer.valueOf(id));
+    	clientRepository.save(cli);
+    	return Response.ok(clientRepository.findAll()).build();
+    }
+    
+    @DELETE
+    @Path("/delete")
+    @Produces("application/json")
+    public Response deleteClient(@PathParam("id") final String id) {
+    	clientRepository.deleteById(id);
+    	return Response.ok(clientRepository.findAll()).build();
+    }
+    
+    @PUT
+    @Path("/update")
+    @Produces("application/json")
+    public Response updateClient(@PathParam("id") final String id) {
+    	Client c = clientRepository.findById(id);
+    	clientRepository.update(c);
+    	return Response.ok(clientRepository.findAll()).build();
+    }
     
 }
